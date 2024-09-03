@@ -19,9 +19,11 @@ local defaults = {
     'command',
   },
   mappings    = {
-    complete      = '<Tab>',
-    run_selection = '<C-CR>',
-    run_input     = '<CR>',
+    complete            = '<Tab>',
+    run_selection       = '<C-CR>',
+    run_input           = '<CR>',
+    move_selection_next = '<Tab>',
+    move_selection_prev = '<S-Tab>',
   },
   overseer    = {
     enabled = true,

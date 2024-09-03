@@ -51,9 +51,11 @@ local make_picker = function(opts)
     finder = make_finder(config),
     sorter = sorter(opts),
     attach_mappings = function(_, map)
-      map("i", config.mappings.complete, action.complete_input)     -- <Tab>
-      map("i", config.mappings.run_input, action.run_input)         -- <CR>
-      map("i", config.mappings.run_selection, action.run_selection) -- <C-CR>
+      map("i", config.mappings.complete, action.complete_input)                     -- <Tab>
+      map("i", config.mappings.run_input, action.run_input)                         -- <CR>
+      map("i", config.mappings.run_selection, action.run_selection)                 -- <C-CR>
+      map("i", config.mappings.move_selection_next, action.move_selection_next)     -- <Tab>
+      map("i", config.mappings.move_selection_prev, action.move_selection_previous) -- <S-Tab>
       map("i", "<C-e>", action.edit)
       require("telescope.actions").close:enhance {
         post = function()
